@@ -16,7 +16,7 @@ Copyright © 2016 TSPrograms.
     else {
       this.addEventListener(event, function(e) {
         var matches = (this === global ? doc : this).querySelectorAll(selector);
-        if ([].indexOf.call(matches) !== -1) {
+        if ([].indexOf.call(matches, e.target) !== -1) {
           callback.call(e.target, e);
         }
       });
